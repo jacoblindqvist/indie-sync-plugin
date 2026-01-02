@@ -1,0 +1,10 @@
+{
+  "id": "indie-sync",
+  "name": "Indie-Sync",
+  "version": "0.1.0",
+  "minAppVersion": "1.0.0",
+  "author": "Pubit",
+  "authorUrl": "https://indie-sync.com",
+  "description": "Sync your Obsidian vaults across devices with end-to-end encryption. Privacy-focused, usage-based pricing.",
+  "isDesktopOnly": false
+}

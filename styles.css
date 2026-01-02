@@ -1,0 +1,239 @@
+/* Indie-Sync Plugin Styles */
+
+/* ============================================================================
+   Version History Modal
+   ============================================================================ */
+
+.indie-sync-version-history {
+	max-width: 800px;
+	width: 90vw;
+}
+
+.indie-sync-version-container {
+	display: flex;
+	gap: 20px;
+	min-height: 400px;
+}
+
+.indie-sync-version-list {
+	flex: 0 0 250px;
+	border-right: 1px solid var(--background-modifier-border);
+	padding-right: 20px;
+}
+
+.indie-sync-version-list h3 {
+	margin: 0 0 10px 0;
+	font-size: 14px;
+	color: var(--text-muted);
+}
+
+.indie-sync-version-list ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	max-height: 350px;
+	overflow-y: auto;
+}
+
+.indie-sync-version-list li {
+	padding: 10px;
+	border-radius: 6px;
+	cursor: pointer;
+	margin-bottom: 4px;
+	transition: background-color 0.1s ease;
+}
+
+.indie-sync-version-list li:hover {
+	background-color: var(--background-modifier-hover);
+}
+
+.indie-sync-version-list li.is-selected {
+	background-color: var(--interactive-accent);
+	color: var(--text-on-accent);
+}
+
+.indie-sync-version-list li.is-selected .version-size {
+	color: var(--text-on-accent);
+	opacity: 0.8;
+}
+
+.indie-sync-version-list .version-info {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.indie-sync-version-list .version-date {
+	font-size: 13px;
+}
+
+.indie-sync-version-list .version-size {
+	font-size: 11px;
+	color: var(--text-muted);
+}
+
+.indie-sync-version-preview {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.indie-sync-version-preview h3 {
+	margin: 0 0 10px 0;
+	font-size: 14px;
+	color: var(--text-muted);
+}
+
+.indie-sync-version-preview .version-meta {
+	margin-bottom: 15px;
+}
+
+.indie-sync-version-preview .version-meta p {
+	margin: 4px 0;
+	font-size: 12px;
+	color: var(--text-muted);
+}
+
+.indie-sync-version-preview .version-preview-content {
+	flex: 1;
+	min-height: 200px;
+	font-family: var(--font-monospace);
+	font-size: 12px;
+	resize: none;
+	background-color: var(--background-secondary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+.indie-sync-version-preview .version-actions {
+	display: flex;
+	gap: 10px;
+}
+
+/* ============================================================================
+   Usage Stats Modal
+   ============================================================================ */
+
+.indie-sync-usage-modal {
+	max-width: 500px;
+}
+
+.indie-sync-usage-stats {
+	margin: 20px 0;
+}
+
+.indie-sync-usage-bar {
+	height: 20px;
+	background-color: var(--background-secondary);
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 10px 0;
+}
+
+.indie-sync-usage-bar-fill {
+	height: 100%;
+	background-color: var(--interactive-accent);
+	transition: width 0.3s ease;
+}
+
+.indie-sync-usage-bar-fill.is-warning {
+	background-color: var(--text-warning);
+}
+
+.indie-sync-usage-bar-fill.is-critical {
+	background-color: var(--text-error);
+}
+
+.indie-sync-usage-details {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+	margin-top: 20px;
+}
+
+.indie-sync-usage-item {
+	background-color: var(--background-secondary);
+	padding: 15px;
+	border-radius: 8px;
+}
+
+.indie-sync-usage-item .label {
+	font-size: 12px;
+	color: var(--text-muted);
+	margin-bottom: 5px;
+}
+
+.indie-sync-usage-item .value {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.indie-sync-usage-cost {
+	margin-top: 20px;
+	padding: 15px;
+	background-color: var(--background-secondary);
+	border-radius: 8px;
+	text-align: center;
+}
+
+.indie-sync-usage-cost .label {
+	font-size: 12px;
+	color: var(--text-muted);
+	margin-bottom: 5px;
+}
+
+.indie-sync-usage-cost .value {
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--interactive-accent);
+}
+
+.indie-sync-usage-cost .free {
+	color: var(--text-success);
+}
+
+/* ============================================================================
+   Loading & Error States
+   ============================================================================ */
+
+.indie-sync-loading,
+.indie-sync-error {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 200px;
+	color: var(--text-muted);
+}
+
+.indie-sync-error {
+	color: var(--text-error);
+}
+
+/* ============================================================================
+   Status Bar
+   ============================================================================ */
+
+.indie-sync-status {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.indie-sync-status:hover {
+	color: var(--text-normal);
+}
+
+.indie-sync-status.is-syncing {
+	color: var(--text-accent);
+}
+
+.indie-sync-status.is-error {
+	color: var(--text-error);
+}
+
+.indie-sync-status.is-locked {
+	color: var(--text-warning);
+}
